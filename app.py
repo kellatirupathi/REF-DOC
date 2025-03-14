@@ -492,7 +492,7 @@ class HackMDUploader:
                 with st.spinner(f"Content is large. Splitting into {len(chunks)} parts..."):
                     part_links = []
                     # Create a simpler index with just the document parts
-                    index_content = f"# {title_name}"
+                    index_content = f"# {title_name}\n\n## Document Parts\n\n"
                     
                     # Create each part
                     for i, chunk in enumerate(chunks):
