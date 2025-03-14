@@ -20,7 +20,7 @@ import concurrent.futures
 import google.generativeai as genai
 
 # Set up Gemini API Key
-genai.configure(api_key="AIzaSyBBFKiwVjOlz06hGtjXe_NBa8D4Iyh_k_k")  # Replace with your actual Gemini API Key
+genai.configure(api_key=st.secrets["gemini"]["api_key"])
 
 def analyze_text_with_gemini(prompt):
     try:
