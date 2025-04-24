@@ -274,6 +274,30 @@ def solution_prompt_for_concept(concept: str) -> str:
        * Discuss space complexity
        * Mention any trade-offs or alternative approaches
 
+    For example, for "Fibonacci Sequence", the answer should look like:
+
+    **Question Text**:
+    Write a function to generate the nth Fibonacci number.
+    Example: `fibonacci(5) // Output: 5`
+    
+    **Approach**:
+    * **Understand the Problem**: The Fibonacci sequence starts with 0, 1, and each subsequent number is the sum of the previous two (0, 1, 1, 2, 3, 5, ...). The task is to return the nth number.
+    * **Steps**:
+       1. Handle base cases:
+          * If n = 0, return 0.
+          * If n = 1, return 1.
+       2. Choose an approach:
+          * **Iterative**: Use a loop to compute the nth number.
+          * **Recursive**: Call the function recursively.
+          * **Dynamic Programming**: Store previously calculated values.
+       3. Return the nth Fibonacci number.
+    * **Edge Cases**:
+       * Handle negative inputs (return an error or undefined).
+       * Handle large n values.
+    * **Optimization**:
+       * Iterative approach is O(n) time and O(1) space.
+       * Recursive without memoization is O(2^n) and should be avoided.
+
     For non-coding theoretical concepts, provide a detailed explanation covering relevant details
     using bullet points or structured formatting where appropriate.
 
