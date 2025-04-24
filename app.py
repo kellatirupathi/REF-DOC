@@ -232,77 +232,25 @@ class BatchConceptsProcessor:
         return self.results
 
 
-# def solution_prompt_for_concept(concept: str) -> str:
-#     """Generate a solution prompt for a concept"""
-#     return f"""
-#     Provide a theoretical answer for the concept: {concept}, ensuring key details are covered without including a summary or conclusion.
-
-#     **For Coding-Related Questions**:
-#     - Do NOT provide complete code.
-#     - Instead, describe the approach in a structured manner:
-#     - Explain the problem briefly.
-#     - Outline the key steps needed to solve it.
-#     - Mention important considerations like time complexity, edge cases, and best practices.
-
-#     **For Non-Coding Theoretical Concepts**:
-#     - Provide an in-depth explanation covering relevant details.
-#     - Use bullet points or structured formatting where appropriate.
-
-#     Concept: {concept}
-#     """
-
 def solution_prompt_for_concept(concept: str) -> str:
     """Generate a solution prompt for a concept"""
     return f"""
-    For coding-related concepts or algorithms, provide a structured explanation in this format:
+    Provide a theoretical answer for the concept: {concept}, ensuring key details are covered without including a summary or conclusion.
 
-    **Question Text**:
-    Restate the concept as a clear question or problem statement.
-    Include an example input/output if relevant.
+    **For Coding-Related Questions**:
+    - Do NOT provide complete code.
+    - Instead, describe the approach in a structured manner:
+    - Explain the problem briefly.
+    - Outline the key steps needed to solve it.
+    - Mention important considerations like time complexity, edge cases, and best practices.
 
-    **Approach**:
-    * **Understand the Problem**: Begin with a concise description of what the problem is asking.
-    * **Steps**:
-       1. Break down the solution into numbered steps
-       2. Explain key implementation details
-       3. Describe the algorithm or technique without providing complete code
-    * **Edge Cases**:
-       * List important edge cases to consider
-       * Explain how they should be handled
-    * **Optimization**:
-       * Discuss time complexity (Big O notation)
-       * Discuss space complexity
-       * Mention any trade-offs or alternative approaches
-
-    For example, for "Fibonacci Sequence", the answer should look like:
-
-    **Question Text**:
-    Write a function to generate the nth Fibonacci number.
-    Example: `fibonacci(5) // Output: 5`
-    
-    **Approach**:
-    * **Understand the Problem**: The Fibonacci sequence starts with 0, 1, and each subsequent number is the sum of the previous two (0, 1, 1, 2, 3, 5, ...). The task is to return the nth number.
-    * **Steps**:
-       1. Handle base cases:
-          * If n = 0, return 0.
-          * If n = 1, return 1.
-       2. Choose an approach:
-          * **Iterative**: Use a loop to compute the nth number.
-          * **Recursive**: Call the function recursively.
-          * **Dynamic Programming**: Store previously calculated values.
-       3. Return the nth Fibonacci number.
-    * **Edge Cases**:
-       * Handle negative inputs (return an error or undefined).
-       * Handle large n values.
-    * **Optimization**:
-       * Iterative approach is O(n) time and O(1) space.
-       * Recursive without memoization is O(2^n) and should be avoided.
-
-    For non-coding theoretical concepts, provide a detailed explanation covering relevant details
-    using bullet points or structured formatting where appropriate.
+    **For Non-Coding Theoretical Concepts**:
+    - Provide an in-depth explanation covering relevant details.
+    - Use bullet points or structured formatting where appropriate.
 
     Concept: {concept}
     """
+
 
 
 class GoogleSheetLogger:
